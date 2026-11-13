@@ -1,1 +1,63 @@
-<p>navbar works!</p>
+<header class="navbar">
+  <a href="#top" class="navbar__logo">Dom<span class="navbar__logo-dot">i</span>nik</a>
+
+  <nav class="navbar__links">
+    <a href="#about-me">About me</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="navbar__lang">
+    <button
+      type="button"
+      class="navbar__lang-btn"
+      [class.navbar__lang-btn--active]="currentLang() === 'de'"
+      (click)="setLang('de')"
+    >
+      DE
+    </button>
+    <button
+      type="button"
+      class="navbar__lang-btn"
+      [class.navbar__lang-btn--active]="currentLang() === 'en'"
+      (click)="setLang('en')"
+    >
+      EN
+    </button>
+  </div>
+
+  <button
+    type="button"
+    class="navbar__burger"
+    [class.navbar__burger--active]="isMenuOpen()"
+    (click)="toggleMenu()"
+    [attr.aria-expanded]="isMenuOpen()"
+    aria-label="Menü öffnen"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+@if (isMenuOpen()) {
+  <div class="navbar__overlay">
+    <nav class="navbar__overlay-links">
+      <a href="#about-me" (click)="closeMenu()">About me</a>
+      <a href="#skills" (click)="closeMenu()">My skills</a>
+      <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
+      <a href="#contact" (click)="closeMenu()">Contact</a>
+    </nav>
+
+    <div class="navbar__overlay-lang">
+      <button type="button" [class.active]="currentLang() === 'en'" (click)="setLang('en')">
+        EN
+      </button>
+      <span>/</span>
+      <button type="button" [class.active]="currentLang() === 'de'" (click)="setLang('de')">
+        DE
+      </button>
+    </div>
+  </div>
+}

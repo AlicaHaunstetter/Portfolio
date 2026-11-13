@@ -1,0 +1,161 @@
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background-color: var(--color-background);
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__logo-dot {
+    color: var(--color-primary-2);
+  }
+
+  &__links {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+
+      &:hover {
+        color: var(--color-primary-1);
+      }
+    }
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__lang-btn {
+    font-family: inherit;
+    font-size: 0.875rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-primary-1);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &--active {
+      background-color: var(--color-primary-1);
+      border-color: var(--color-primary-1);
+      color: white;
+      font-weight: 700;
+    }
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: #fff;
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+    }
+
+    &--active {
+      span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+.navbar__overlay {
+  position: fixed;
+  inset: 0;
+  top: 73px;
+  background-color: var(--color-background);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 3rem;
+}
+
+.navbar__overlay-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+}
+
+.navbar__overlay-lang {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+
+  button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+
+    &.active {
+      color: var(--color-primary-1);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar__links,
+  .navbar__lang {
+    display: none;
+  }
+
+  .navbar__burger {
+    display: flex;
+  }
+}

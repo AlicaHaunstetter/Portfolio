@@ -1,46 +1,48 @@
 <header class="navbar">
-  <a href="#top" class="navbar__logo">
-    <img src="/icons/Alica-Logo.png" alt="Logo" class="navbar__logo-img" />
-  </a>
+  <div class="navbar__inner content-wrapper">
+    <a href="#top" class="navbar__logo">
+      <img src="/icons/Alica-Logo.png" alt="Logo" class="navbar__logo-img" />
+    </a>
 
-  <nav class="navbar__links">
-    <a href="#about-me">About me</a>
-    <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <nav class="navbar__links">
+      <a href="#about-me">About me</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <div class="navbar__lang">
+    <div class="navbar__lang">
+      <button
+        type="button"
+        class="navbar__lang-btn"
+        [class.navbar__lang-btn--active]="currentLang() === 'de'"
+        (click)="setLang('de')"
+      >
+        DE
+      </button>
+      <button
+        type="button"
+        class="navbar__lang-btn"
+        [class.navbar__lang-btn--active]="currentLang() === 'en'"
+        (click)="setLang('en')"
+      >
+        EN
+      </button>
+    </div>
+
     <button
       type="button"
-      class="navbar__lang-btn"
-      [class.navbar__lang-btn--active]="currentLang() === 'de'"
-      (click)="setLang('de')"
+      class="navbar__burger"
+      [class.navbar__burger--active]="isMenuOpen()"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-label="Menü öffnen"
     >
-      DE
-    </button>
-    <button
-      type="button"
-      class="navbar__lang-btn"
-      [class.navbar__lang-btn--active]="currentLang() === 'en'"
-      (click)="setLang('en')"
-    >
-      EN
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
   </div>
-
-  <button
-    type="button"
-    class="navbar__burger"
-    [class.navbar__burger--active]="isMenuOpen()"
-    (click)="toggleMenu()"
-    [attr.aria-expanded]="isMenuOpen()"
-    aria-label="Menü öffnen"
-  >
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
 </header>
 
 @if (isMenuOpen()) {

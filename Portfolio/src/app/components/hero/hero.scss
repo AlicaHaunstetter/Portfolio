@@ -4,13 +4,18 @@
 
 .hero-row {
   position: relative;
-  display: flex;
   height: 100%;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
   overflow: hidden;
   background-color: var(--color-background);
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    height: 100%;
+  }
 
   .profile-picture {
     position: relative;
@@ -95,7 +100,7 @@
 .social-row {
   position: absolute;
   bottom: 3rem;
-  left: 2rem;
+  left: 0;
   z-index: 3;
   display: flex;
   align-items: center;

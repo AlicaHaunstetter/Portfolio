@@ -1,11 +1,14 @@
 .about-me {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
-  padding: 6rem 4rem;
+  padding-block: 6rem;
   background-color: var(--color-background);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+  }
 
   &__text {
     max-width: 500px;

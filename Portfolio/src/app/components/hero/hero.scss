@@ -128,3 +128,20 @@
     text-decoration: none;
   }
 }
+
+.scroll-down {
+  position: absolute;
+  rotate: 90deg;
+  transform-origin: right;
+  bottom: 10%;
+  right: 10%;
+  z-index: 4;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  svg {
+    rotate: -90deg;
+  }
+}

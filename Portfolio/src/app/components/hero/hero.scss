@@ -1,10 +1,14 @@
+.hero-wrapper {
+  height: calc(100vh - var(--navbar-height));
+}
+
 .hero-row {
   position: relative;
   display: flex;
+  height: 100%;
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  height: 100vh;
   overflow: hidden;
   background-color: var(--color-background);
 
@@ -26,6 +30,7 @@
       position: relative;
       width: 500px;
       z-index: 1;
+      bottom: -100px;
     }
   }
 
@@ -34,7 +39,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    z-index: 1;
+    z-index: 3;
 
     .hero-text {
       display: flex;
@@ -75,5 +80,51 @@
       color: white;
       cursor: pointer;
     }
+  }
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: clamp(-40rem, 10rem - 33.33vw, 0rem);
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+
+.social-row {
+  position: absolute;
+  bottom: 3rem;
+  left: 2rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  font-size: 0.9rem;
+
+  &__line {
+    display: block;
+    width: 48px;
+    height: 2px;
+    background-color: var(--color-primary-2);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+
+    svg {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  &__email {
+    color: white;
+    text-decoration: none;
   }
 }

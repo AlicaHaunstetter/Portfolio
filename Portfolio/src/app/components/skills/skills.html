@@ -1,1 +1,27 @@
-<p>skills works!</p>
+<section class="skills" id="skills">
+  <div class="skills__inner content-wrapper">
+    <ul class="skills__grid">
+      @for (skill of skills; track skill.name) {
+        <li class="skills__item" [class.skills__item--highlight]="$last">
+          <img [src]="'/icons/Logos/' + skill.icon" [alt]="skill.name" />
+          <span>{{ skill.name }}</span>
+        </li>
+      }
+    </ul>
+
+    <div class="skills__text">
+      <div class="skills__headline">
+        <h1>My skills</h1>
+        <span class="skills__line"></span>
+      </div>
+
+      <p>Show that you have used a variety of front-end technologies in your projects.</p>
+
+      <h2>Looking for <span class="skills__accent">another skill</span>?</h2>
+
+      <p>Reveal enthusiasm for learning new technologies and frameworks.</p>
+
+      <a href="#contact" class="skills__button">Get in touch</a>
+    </div>
+  </div>
+</section>

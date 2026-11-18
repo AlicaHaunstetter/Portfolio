@@ -1,1 +1,46 @@
-<p>portfolio works!</p>
+<section class="portfolio" id="portfolio">
+  <div class="portfolio__inner content-wrapper">
+    <div class="portfolio__text">
+      <div class="portfolio__headline">
+        <span class="portfolio__line portfolio__line--left"></span>
+        <h1>Portfolio</h1>
+        <span class="portfolio__line"></span>
+      </div>
+
+      <p>
+        Explore a selection of my work here - Interact with projects to see my skills in action.
+      </p>
+    </div>
+
+    <ul class="portfolio__projects">
+      @for (project of projects; track project.name) {
+        <li class="portfolio__project" [class.portfolio__project--reverse]="$odd">
+          <img class="portfolio__image" [src]="project.image" [alt]="project.name" />
+
+          <div class="portfolio__info">
+            <h3>{{ project.name }}</h3>
+            <p class="portfolio__skills">{{ project.skills.join(' | ') }}</p>
+            <p class="portfolio__description">{{ project.description }}</p>
+
+            <div class="portfolio__links">
+              <a
+                [href]="project.liveUrl"
+                target="_blank"
+                rel="noopener"
+                class="portfolio__btn portfolio__btn--live"
+                >Live test</a
+              >
+              <a
+                [href]="project.githubUrl"
+                target="_blank"
+                rel="noopener"
+                class="portfolio__btn portfolio__btn--github"
+                >Github</a
+              >
+            </div>
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

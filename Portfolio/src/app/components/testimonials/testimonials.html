@@ -1,1 +1,54 @@
-<p>testimonials works!</p>
+<section class="testimonials">
+  <div class="testimonials__content">
+    <div class="testimonials__slide">
+      <span class="testimonials__quote" aria-hidden="true"></span>
+
+      <article class="testimonials__card" aria-live="polite">
+        <p class="testimonials__text">{{ current().text }}</p>
+        <div class="testimonials__author">
+          <span class="testimonials__line"></span>
+          <span>{{ current().author }} - {{ current().role }}</span>
+        </div>
+      </article>
+
+      <div class="testimonials__photo">
+        <img [src]="current().image" [alt]="current().author" />
+      </div>
+    </div>
+
+    <nav class="testimonials__nav" aria-label="Testimonials navigation">
+      <button
+        type="button"
+        class="testimonials__arrow"
+        (click)="prev()"
+        aria-label="Previous testimonial"
+      >
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </button>
+
+      @for (t of testimonials; track t.author; let i = $index) {
+        <button
+          type="button"
+          class="testimonials__dot"
+          [class.testimonials__dot--active]="i === currentIndex()"
+          [attr.aria-current]="i === currentIndex()"
+          [attr.aria-label]="'Show testimonial ' + (i + 1)"
+          (click)="goTo(i)"
+        ></button>
+      }
+
+      <button
+        type="button"
+        class="testimonials__arrow"
+        (click)="next()"
+        aria-label="Next testimonial"
+      >
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</section>

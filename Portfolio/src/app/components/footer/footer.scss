@@ -1,0 +1,85 @@
+.footer {
+  background-color: var(--color-background);
+  border-top: 2px solid var(--color-primary-1);
+  color: #fff;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding-block: 5rem;
+  }
+
+  // ---------- Links: Logo + Legal Notice ----------
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  &__logo img {
+    display: block;
+    height: 40px;
+    width: auto;
+  }
+
+  &__legal {
+    color: #fff;
+    font-size: 0.75rem;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-primary-1);
+    }
+  }
+
+  // ---------- Mitte: Copyright ----------
+  &__copyright {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  // ---------- Rechts: Socials ----------
+  &__socials {
+    justify-self: end;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+      display: block;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+
+    img {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  // ---------- Mobile ----------
+  @media (max-width: 700px) {
+    &__inner {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    &__brand {
+      align-items: center;
+    }
+
+    &__socials {
+      justify-self: center;
+    }
+  }
+}

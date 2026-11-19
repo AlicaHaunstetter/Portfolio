@@ -1,1 +1,27 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="footer__inner content-wrapper">
+    <div class="footer__brand">
+      <a href="#top" class="footer__logo">
+        <img src="/icons/Alica-Logo.png" alt="Alica Haunstetter – back to top" />
+      </a>
+      <a href="#" class="footer__legal">Legal Notice</a>
+    </div>
+
+    <p class="footer__copyright">© Alica Haunstetter {{ year }}</p>
+
+    <ul class="footer__socials">
+      @for (link of socialLinks; track link.name) {
+        <li>
+          <a
+            [href]="link.url"
+            [attr.target]="link.url.startsWith('mailto') ? null : '_blank'"
+            rel="noopener"
+            [attr.aria-label]="link.name"
+          >
+            <img [src]="link.icon" alt="" />
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+</footer>

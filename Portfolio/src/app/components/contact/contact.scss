@@ -1,0 +1,217 @@
+.contact {
+  position: relative;
+  padding-block: 6rem;
+  background-color: var(--color-background);
+  overflow: hidden;
+  color: #fff;
+
+  // Lila Glow unten links
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    left: -150px;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: var(--color-primary-2);
+    filter: blur(100px);
+    opacity: 0.8;
+    pointer-events: none;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  // ---------- Headline ----------
+  &__heading {
+    position: relative;
+    align-self: center;
+
+    h1 {
+      margin: 0;
+      font-size: 4.5rem;
+      font-weight: 700;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 1.5rem);
+    width: 100vw;
+    height: 2px;
+    background-color: var(--color-primary-2);
+  }
+
+  // ---------- Zwei Spalten ----------
+  &__body {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+  }
+
+  &__text {
+    max-width: 380px;
+
+    h2 {
+      margin: 0 0 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0 0 1rem;
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+  }
+
+  // ---------- Formular ----------
+  &__form {
+    flex: 1;
+    max-width: 490px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--color-primary-2);
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+    font: inherit;
+    font-size: 0.8rem;
+
+    &::placeholder {
+      color: #fff;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary-1);
+    }
+
+    &.ng-invalid.ng-touched {
+      border-color: #e61c40;
+    }
+  }
+
+  textarea {
+    min-height: 160px;
+    resize: vertical;
+  }
+
+  &__error {
+    color: #e61c40;
+    font-size: 0.75rem;
+  }
+
+  // ---------- Checkbox ----------
+  &__privacy {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.7rem;
+    cursor: pointer;
+
+    input {
+      appearance: none;
+      flex-shrink: 0;
+      width: 14px;
+      height: 14px;
+      margin: 0;
+      border: 2px solid var(--color-primary-1);
+      border-radius: 2px;
+      cursor: pointer;
+
+      &:checked {
+        background-color: var(--color-primary-1);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--color-primary-2);
+        outline-offset: 2px;
+      }
+    }
+
+    a {
+      color: var(--color-primary-2);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // ---------- Button ----------
+  &__submit {
+    align-self: center;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--color-primary-2);
+    color: #fff;
+    font: inherit;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #b4b4b4;
+      cursor: not-allowed;
+    }
+  }
+
+  &__feedback {
+    margin: 0;
+    text-align: center;
+    font-size: 0.875rem;
+
+    &--success {
+      color: var(--color-primary-1);
+    }
+
+    &--error {
+      color: #e61c40;
+    }
+  }
+
+  // ---------- Mobile ----------
+  @media (max-width: 900px) {
+    &__heading h1 {
+      font-size: 3rem;
+    }
+
+    &__body {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    &__text {
+      max-width: 490px;
+    }
+
+    &__form {
+      width: 100%;
+    }
+  }
+}

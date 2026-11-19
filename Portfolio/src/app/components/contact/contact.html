@@ -1,1 +1,87 @@
-<p>contact works!</p>
+<section class="contact" id="contact">
+  <div class="contact__inner content-wrapper">
+    <div class="contact__heading">
+      <span class="contact__line"></span>
+      <h1>Contact</h1>
+    </div>
+
+    <div class="contact__body">
+      <div class="contact__text">
+        <h2>Got a problem to solve?</h2>
+        <p>
+          Encourage people to contact you and describe what role you are interested in. Show that
+          you will add value to their projects through your work.
+        </p>
+        <p>Need a Frontend developer? <strong>Contact me!</strong></p>
+      </div>
+
+      <form class="contact__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+        <div class="contact__field">
+          <input
+            type="text"
+            formControlName="name"
+            placeholder="Your name"
+            aria-label="Your name"
+          />
+          @if (isInvalid('name')) {
+            <span class="contact__error">Please enter your name.</span>
+          }
+        </div>
+
+        <div class="contact__field">
+          <input
+            type="email"
+            formControlName="email"
+            placeholder="Your email"
+            aria-label="Your email"
+          />
+          @if (isInvalid('email')) {
+            <span class="contact__error">Please enter a valid email address.</span>
+          }
+        </div>
+
+        <div class="contact__field">
+          <textarea
+            formControlName="message"
+            placeholder="Your message"
+            aria-label="Your message"
+            rows="6"
+          ></textarea>
+          @if (isInvalid('message')) {
+            <span class="contact__error">Please enter at least 10 characters.</span>
+          }
+        </div>
+
+        <label class="contact__privacy">
+          <input type="checkbox" formControlName="privacy" />
+          <span>
+            I've read the <a href="#">privacy policy</a>
+            and agree to the processing of my data as outlined.
+          </span>
+        </label>
+        @if (isInvalid('privacy')) {
+          <span class="contact__error">Please accept the privacy policy.</span>
+        }
+
+        <button
+          type="submit"
+          class="contact__submit"
+          [disabled]="form.invalid || status() === 'sending'"
+        >
+          {{ status() === 'sending' ? 'Sending…' : 'Send message :)' }}
+        </button>
+
+        @if (status() === 'success') {
+          <p class="contact__feedback contact__feedback--success">
+            Thanks! Your message has been sent.
+          </p>
+        }
+        @if (status() === 'error') {
+          <p class="contact__feedback contact__feedback--error">
+            Something went wrong. Please try again later.
+          </p>
+        }
+      </form>
+    </div>
+  </div>
+</section>

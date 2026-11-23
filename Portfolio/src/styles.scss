@@ -35,3 +35,17 @@ body {
   margin: 0 auto;
   padding-inline: 4rem;
 }
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+app-footer {
+  margin-top: auto;
+}
+
+html {
+  scrollbar-gutter: stable;
+}

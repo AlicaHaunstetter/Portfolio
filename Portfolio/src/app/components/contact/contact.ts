@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
-import { RouterLink } from '@angular/router';
 
 type SendStatus = 'idle' | 'sending' | 'success' | 'error';
 
@@ -15,7 +15,7 @@ export class Contact {
   private fb = inject(FormBuilder);
   private http = inject(HttpClient);
 
-  private readonly endpoint = 'https://deinedomain.de/sendMail.php';
+  private readonly endpoint = 'https://alica-haunstetter.de/sendMail.php';
 
   status = signal<SendStatus>('idle');
 

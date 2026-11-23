@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 interface SocialLink {
   name: string;
@@ -7,7 +8,7 @@ interface SocialLink {
 }
 
 @Component({
-  imports: [],
+  imports: [RouterLink],
   selector: 'app-footer',
   styleUrl: './footer.scss',
   templateUrl: './footer.html',

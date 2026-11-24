@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { LegalContent } from '../components/legal-content/legal-content';
 
 @Component({
-  imports: [LegalContent],
+  imports: [],
   selector: 'app-legal-notice',
   styleUrl: './legal-notice.scss',
   templateUrl: './legal-notice.html',

@@ -16,22 +16,22 @@ interface Testimonial {
 export class Testimonials {
   testimonials: Testimonial[] = [
     {
-      text: "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
-      author: 'V. Schuster',
-      role: 'Team Partner',
-      image: '/img/testimonial-1.jpg',
+      text: 'Alica has an impressive eye for design paired with a genuinely structured approach to coding. She never just settles for a quick fix—she takes the time to understand the root cause and comes up with clean, thoughtful solutions. Her progress and curiosity make her a great asset to any frontend team.',
+      author: 'Giuliano Gioia',
+      role: 'Mentor, Developer Akademier',
+      image: '/img/GIULIANOGIOIA.jpg',
     },
     {
-      text: 'Placeholder text for the second testimonial.',
-      author: 'A. Example',
+      text: 'Working with Alica on group projects was always super smooth and motivating. She brings great UI/UX ideas to the table, stays calm when tricky bugs pop up, and communicates clearly so the whole team stays on track.',
+      author: 'Patrick Wagner',
       role: 'Frontend Developer',
-      image: '/img/testimonial-2.jpg',
+      image: 'img/PatrickWagner.jpg',
     },
     {
-      text: 'Placeholder text for the third testimonial.',
-      author: 'B. Example',
-      role: 'Project Lead',
-      image: '/img/testimonial-3.jpg',
+      text: 'Coming from C++, I was really impressed by how clean and well-organized Alicas frontend code is. She solves problems well, has a great sense for design, and working through ideas with her always improved our projects. Beyond her technical skills, Alica is a fantastic team player—she is always friendly, approachable, and brings a positive energy that lifts the entire team.',
+      author: 'Neelima Bhupati',
+      role: 'Developer (former C++ Engineer)',
+      image: '/img/NEELIMABHUPATI.jpg',
     },
   ];
 

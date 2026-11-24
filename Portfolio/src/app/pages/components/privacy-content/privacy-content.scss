@@ -50,5 +50,35 @@
     p {
       margin: 0 0 2.5rem;
     }
+
+    h3 {
+      margin: 0 0 0.75rem;
+      font-size: 1.25rem;
+      color: var(--color-primary-1);
+    }
+
+    h4 {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    ul {
+      margin: 0 0 2.5rem;
+      padding-left: 1.25rem;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    a {
+      color: var(--color-primary-2);
+      word-break: break-all;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }

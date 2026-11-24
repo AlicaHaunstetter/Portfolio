@@ -27,29 +27,11 @@ export class Portfolio {
       githubUrl: '#',
     },
     {
-      name: 'Sharkie',
+      name: 'Wicked Woods',
       skills: ['JavaScript', 'HTML', 'CSS'],
       description:
-        'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
-      image: '/img/SHARKIE.png',
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      name: 'Simple CRM',
-      skills: ['Angular', 'Firebase'],
-      description:
-        'A very Simple Customer Relationship Management system working with CRUD functionality.',
-      image: '/img/CRM.png',
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      name: 'Pokédex',
-      skills: ['JavaScript', 'HTML', 'CSS', 'Api'],
-      description:
-        'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-      image: '/img/POKEDEX.png',
+        'A simple Jump-and-Run game based on an object-oriented approach. Help the little witch survive the wicked woods by collecting potions and fending off dark creatures.',
+      image: '/img/WICKEDWOODS.png',
       liveUrl: '#',
       githubUrl: '#',
     },

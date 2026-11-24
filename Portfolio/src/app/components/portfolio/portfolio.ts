@@ -32,8 +32,8 @@ export class Portfolio {
       description:
         'A simple Jump-and-Run game based on an object-oriented approach. Help the little witch survive the wicked woods by collecting potions and fending off dark creatures.',
       image: '/img/WICKEDWOODS.png',
-      liveUrl: '#',
-      githubUrl: '#',
+      liveUrl: 'https://wickedwoods.alica-haunstetter.de/',
+      githubUrl: 'https://github.com/AlicaHaunstetter/WickedWoods-Jump-Run',
     },
     {
       name: 'DA Bubble',

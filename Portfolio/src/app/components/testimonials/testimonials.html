@@ -1,9 +1,9 @@
 <section class="testimonials">
-  <div class="testimonials__content">
+  <app-blob color="green" [seed]="34" [duration]="17" class="testimonials__blob" />
+  <div class="testimonials__content content-wrapper">
     <div class="testimonials__slide">
-      <span class="testimonials__quote" aria-hidden="true"></span>
-
       <article class="testimonials__card" aria-live="polite">
+        <span class="testimonials__quote" aria-hidden="true"></span>
         <p class="testimonials__text">{{ current().text | translate }}</p>
         <div class="testimonials__author">
           <span class="testimonials__line"></span>

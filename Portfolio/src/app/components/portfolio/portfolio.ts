@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import { Blob } from '../blob/blob';
 
 interface Project {
   name: string;
@@ -11,7 +12,7 @@ interface Project {
 }
 
 @Component({
-  imports: [TranslatePipe],
+  imports: [Blob, TranslatePipe],
   selector: 'app-portfolio',
   styleUrl: './portfolio.scss',
   templateUrl: './portfolio.html',

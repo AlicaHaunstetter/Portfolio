@@ -1,22 +1,19 @@
 .privacy {
   padding-block: 2rem 4rem;
   color: #fff;
-  overflow-x: hidden;
 
   // ---------- Überschrift mit Linien ----------
   &__heading {
     display: flex;
     align-items: center;
-    padding-left: 20%;
+    padding-left: 0;
     gap: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
 
     h1 {
       margin: 0;
-      font-size: 3rem;
-      font-weight: 700;
       color: var(--color-primary-1);
-      white-space: nowrap;
+      hyphens: auto;
     }
   }
 
@@ -25,7 +22,7 @@
     background-color: var(--color-primary-2);
 
     &--left {
-      width: 100px;
+      width: 2rem;
       flex-shrink: 0;
     }
 
@@ -43,7 +40,7 @@
 
     h2 {
       margin: 0 0 1rem;
-      font-size: 1.75rem;
+      font-size: clamp(1.25rem, 1rem + 1.5vw, 1.75rem);
       color: var(--color-primary-2);
     }
 
@@ -80,5 +77,19 @@
         text-decoration: none;
       }
     }
+  }
+}
+
+@media (min-width: 1024px) {
+  .privacy__heading {
+    padding-left: 20%;
+  }
+
+  .privacy__heading h1 {
+    white-space: nowrap;
+  }
+
+  .privacy__line--left {
+    width: 100px;
   }
 }

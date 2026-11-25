@@ -1,6 +1,10 @@
 <section class="hero-wrapper">
   <div class="hero-row">
-    <svg class="hero-wave" viewBox="0 0 1440 1079" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      class="hero-wave"
+      viewBox="0 0 1440 1079"
+      preserveAspectRatio="none"
+      fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1440
         0L1440
@@ -37,7 +41,19 @@
 
     <div class="hero-row__inner content-wrapper">
       <div class="profile-picture">
-        <img src="/img/29. photo shadows.png" [alt]="'hero.flaresAlt' | translate" />
+        <app-blob
+          variant="wild"
+          color="purple"
+          [seed]="3"
+          class="profile-picture__blob profile-picture__blob--purple"
+        />
+        <app-blob
+          variant="wild"
+          color="green"
+          [seed]="8"
+          [duration]="20"
+          class="profile-picture__blob profile-picture__blob--green"
+        />
         <img src="/img/Profilbild-Alica.png" [alt]="'hero.portraitAlt' | translate" />
       </div>
       <div class="hero-content">
@@ -49,7 +65,7 @@
           </div>
         </div>
 
-        <button>Let's talk</button>
+        <a href="#contact" class="btn">Let's talk</a>
       </div>
 
       <div class="social-row">

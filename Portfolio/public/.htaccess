@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# 1. HTTPS erzwingen
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 2. Angular-Routing: alles, was keine echte Datei/kein Ordner ist, an index.html geben
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

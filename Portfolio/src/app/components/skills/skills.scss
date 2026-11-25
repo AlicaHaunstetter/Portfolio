@@ -1,33 +1,50 @@
 .skills {
   position: relative;
-  padding-block: 6rem;
-  background-color: var(--color-background);
-  overflow: hidden;
+  padding-block: var(--section-space);
+
+  &__blob {
+    left: -40%;
+    bottom: clamp(-250px, -17vw, -50px);
+    width: clamp(20rem, 45vw, 40rem);
+  }
 
   &__inner {
     position: relative;
+    z-index: 1;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 8rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
   }
 
   &__grid {
+    order: 2;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 110px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     row-gap: 2.5rem;
     column-gap: 1.5rem;
+    width: 100%;
+    max-width: 32rem;
   }
 
   &__item {
+    width: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
     text-align: center;
+    transition:
+      transform 0.2s ease,
+      scale 0.2s ease;
+
+    &:hover {
+      scale: 1.2;
+    }
 
     img {
       width: 48px;
@@ -48,23 +65,19 @@
   }
 
   &__text {
+    display: contents;
     max-width: 420px;
-    display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
+    align-items: center;
+    text-align: center;
 
     h1 {
       color: #fff;
-      font-size: 4.5rem;
-      font-weight: 700;
       margin: 0;
     }
 
     h2 {
       color: #fff;
-      font-size: 1.5rem;
-      font-weight: 700;
       margin: 0 0 1rem;
     }
 
@@ -77,6 +90,7 @@
   }
 
   &__headline {
+    order: 0;
     position: relative;
     margin-bottom: 2rem;
   }
@@ -94,7 +108,20 @@
     color: var(--color-primary-2);
   }
 
+  &__intro {
+    order: 1;
+  }
+
+  &__text h2 {
+    order: 3;
+  }
+
+  &__outro {
+    order: 4;
+  }
+
   &__button {
+    order: 5;
     margin-top: 1rem;
     padding: 0.75rem 1.5rem;
     background-color: var(--color-primary-1);
@@ -103,5 +130,40 @@
     text-decoration: none;
     border-radius: 6px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+    transition:
+      transform 0.2s ease,
+      scale 0.2s ease;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills__blob {
+    left: -10%;
+  }
+
+  .skills__inner {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: clamp(4rem, 8vw, 8rem);
+  }
+
+  .skills__text {
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .skills__grid {
+    order: 0;
+  }
+
+  .skills__item {
+    width: 110px;
   }
 }

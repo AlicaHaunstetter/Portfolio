@@ -1,14 +1,14 @@
 <header class="navbar">
   <div class="navbar__inner content-wrapper">
     <a href="#top" class="navbar__logo">
-      <img src="/icons/Alica-Logo.png" alt="Logo" class="navbar__logo-img" />
+      <img src="/icons/Alica-Logo.png" [alt]="'nav.logoAlt' | translate" class="navbar__logo-img" />
     </a>
 
     <nav class="navbar__links">
-      <a href="#about-me">About me</a>
-      <a href="#skills">Skills</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
+      <a href="#about-me">{{ 'nav.aboutMe' | translate }}</a>
+      <a href="#skills">{{ 'nav.skills' | translate }}</a>
+      <a href="#portfolio">{{ 'nav.portfolio' | translate }}</a>
+      <a href="#contact">{{ 'nav.contact' | translate }}</a>
     </nav>
 
     <div class="navbar__lang">
@@ -35,8 +35,7 @@
       class="navbar__burger"
       [class.navbar__burger--active]="isMenuOpen()"
       (click)="toggleMenu()"
-      [attr.aria-expanded]="isMenuOpen()"
-      aria-label="Menü öffnen"
+      [attr.aria-label]="'nav.openMenu' | translate"
     >
       <span></span>
       <span></span>
@@ -48,10 +47,10 @@
 @if (isMenuOpen()) {
   <div class="navbar__overlay">
     <nav class="navbar__overlay-links">
-      <a href="#about-me" (click)="closeMenu()">About me</a>
-      <a href="#skills" (click)="closeMenu()">My skills</a>
-      <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
-      <a href="#contact" (click)="closeMenu()">Contact</a>
+      <a href="#about-me" (click)="closeMenu()">{{ 'nav.aboutMe' | translate }}</a>
+      <a href="#skills" (click)="closeMenu()">{{ 'nav.mySkills' | translate }}</a>
+      <a href="#portfolio" (click)="closeMenu()">{{ 'nav.portfolio' | translate }}</a>
+      <a href="#contact" (click)="closeMenu()">{{ 'nav.contact' | translate }}</a>
     </nav>
 
     <div class="navbar__overlay-lang">

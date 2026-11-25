@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface Skill {
   name: string;
@@ -6,7 +7,7 @@ interface Skill {
 }
 
 @Component({
-  imports: [],
+  imports: [TranslatePipe],
   selector: 'app-skills',
   styleUrl: './skills.scss',
   templateUrl: './skills.html',
@@ -23,6 +24,6 @@ export class Skills {
     { name: 'REST-API', icon: 'API.png' },
     { name: 'Scrum', icon: 'scrum.png' },
     { name: 'Material Design', icon: 'materialdesign.png' },
-    { name: 'Continually learning', icon: 'learning.png' },
+    { name: 'skills.learning', icon: 'learning.png' },
   ];
 }

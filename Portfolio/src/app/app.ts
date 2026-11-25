@@ -1,7 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './components/navbar/navbar';
 import { Footer } from './components/footer/footer';
+import { LanguageService } from './services/language';
 
 @Component({
   imports: [RouterOutlet, Navbar, Footer],
@@ -11,4 +12,8 @@ import { Footer } from './components/footer/footer';
 })
 export class App {
   protected readonly title = signal('Portfolio');
+
+  constructor() {
+    inject(LanguageService).init();
+  }
 }

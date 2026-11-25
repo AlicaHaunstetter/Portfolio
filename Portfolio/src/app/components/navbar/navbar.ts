@@ -1,14 +1,18 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
+import { Lang, LanguageService } from '../../services/language';
 
 @Component({
-  imports: [],
+  imports: [TranslatePipe],
   selector: 'app-navbar',
   styleUrl: './navbar.scss',
   templateUrl: './navbar.html',
 })
 export class Navbar {
+  private language = inject(LanguageService);
+
   protected readonly isMenuOpen = signal(false);
-  protected readonly currentLang = signal<'en' | 'de'>('en');
+  protected readonly currentLang = this.language.current;
 
   /** Toggles the mobile menu open or closed. */
   protected toggleMenu(): void {
@@ -24,7 +28,7 @@ export class Navbar {
    * Sets the active display language.
    * @param lang - Language code to switch to.
    */
-  protected setLang(lang: 'en' | 'de'): void {
-    this.currentLang.set(lang);
+  protected setLang(lang: Lang): void {
+    this.language.set(lang);
   }
 }

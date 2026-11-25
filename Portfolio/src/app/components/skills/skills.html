@@ -4,27 +4,28 @@
       @for (skill of skills; track skill.name) {
         <li class="skills__item" [class.skills__item--highlight]="$last">
           <img [src]="'/icons/Logos/' + skill.icon" [alt]="skill.name" />
-          <span>{{ skill.name }}</span>
+          <span>{{ skill.name | translate }}</span>
         </li>
       }
     </ul>
 
     <div class="skills__text">
       <div class="skills__headline">
-        <h1>My skills</h1>
+        <h1>{{ 'skills.title' | translate }}</h1>
         <span class="skills__line"></span>
       </div>
 
-      <p>From clean UI code and Angular to REST APIs and Scrum—here’s the toolkit I build with.</p>
+      <p>{{ 'skills.intro' | translate }}</p>
 
-      <h2>Looking for <span class="skills__accent">another skill</span>?</h2>
+      <h2>
+        {{ 'skills.headlineBefore' | translate }}
+        <span class="skills__accent">{{ 'skills.headlineAccent' | translate }}</span>{{
+          'skills.headlineAfter' | translate
+        }}
+      </h2>
+      <p>{{ 'skills.outro' | translate }}</p>
 
-      <p>
-        Always excited to pick up new tools—especially interactive UI, motion, and whatever the
-        project calls for.
-      </p>
-
-      <a href="#contact" class="skills__button">Get in touch</a>
+      <a href="#contact" class="skills__button">{{ 'skills.cta' | translate }}</a>
     </div>
   </div>
 </section>

@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "aboutMe": "About me",
+    "skills": "Skills",
+    "mySkills": "My skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "logoAlt": "Logo",
+    "openMenu": "Open menu"
+  },
+  "hero": {
+    "iAm": "I am",
+    "cta": "Let's talk",
+    "scrollDown": "Scroll down",
+    "portraitAlt": "Portrait of Alica",
+    "flaresAlt": "Background flares"
+  },
+  "about": {
+    "title": "About me",
+    "intro": "I’m a career-changing Frontend Web Developer focused on web development and design. I love bringing creative ideas to life through clean code—and seeing my creativity grow with every new possibility I discover. Right now, I’m soaking up as much knowledge as possible and building projects to launch my career as a Junior Developer.",
+    "location": "I’m based in Meitingen (near Augsburg, Bavaria) and am open to remote opportunities and flexible, modern ways of working.",
+    "curiosity": "Open-mindedly exploring new tech keeps my skills sharp—especially interactive UI/UX, motion design, and scroll-driven animations to bring web experiences to life.",
+    "problemSolving": "With tricky bugs, I understand the root cause first, then aim for a clean, minimal-invasive solution and bounce ideas off the team—combining creativity, self-reliance, and collaboration in every challenge.",
+    "portraitAlt": "Portrait of Alica"
+  },
+  "skills": {
+    "title": "My skills",
+    "intro": "From clean UI code and Angular to REST APIs and Scrum—here’s the toolkit I build with.",
+    "headlineBefore": "Looking for",
+    "headlineAccent": "another skill",
+    "headlineAfter": "?",
+    "outro": "Always excited to pick up new tools—especially interactive UI, motion, and whatever the project calls for.",
+    "cta": "Get in touch",
+    "learning": "Continually learning"
+  },
+  "portfolio": {
+    "intro": "Check out some of my favorite builds—click around and see what I can do in action.",
+    "liveTest": "Live test",
+    "github": "Github",
+    "projects": {
+      "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "wickedWoods": "A simple Jump-and-Run game based on an object-oriented approach. Help the little witch survive the wicked woods by collecting potions and fending off dark creatures.",
+      "daBubble": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+    }
+  },
+  "testimonials": {
+    "navLabel": "Testimonials navigation",
+    "prev": "Previous testimonial",
+    "next": "Next testimonial",
+    "show": "Show testimonial {{number}}",
+    "giuliano": {
+      "text": "Alica has an impressive eye for design paired with a genuinely structured approach to coding. She never just settles for a quick fix—she takes the time to understand the root cause and comes up with clean, thoughtful solutions. Her progress and curiosity make her a great asset to any frontend team.",
+      "role": "Mentor, Developer Akademie"
+    },
+    "patrick": {
+      "text": "Working with Alica on group projects was always super smooth and motivating. She brings great UI/UX ideas to the table, stays calm when tricky bugs pop up, and communicates clearly so the whole team stays on track.",
+      "role": "Frontend Developer"
+    },
+    "neelima": {
+      "text": "Coming from C++, I was really impressed by how clean and well-organized Alicas frontend code is. She solves problems well, has a great sense for design, and working through ideas with her always improved our projects. Beyond her technical skills, Alica is a fantastic team player—she is always friendly, approachable, and brings a positive energy that lifts the entire team.",
+      "role": "Developer (former C++ Engineer)"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Got a problem to solve?",
+    "text": "Looking for a Frontend Developer who cares about both clean code and intuitive design? I’m open to new roles and exciting projects where I can help turn complex ideas into seamless user experiences. Feel free to reach out—I’d love to chat about how I can add value to your team.",
+    "needDev": "Need a Frontend developer?",
+    "contactMe": "Contact me!",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "messagePlaceholder": "Your message",
+    "nameError": "Please enter your name.",
+    "emailError": "Please enter a valid email address.",
+    "messageError": "Please enter at least 10 characters.",
+    "privacyBefore": "I've read the",
+    "privacyLink": "privacy policy",
+    "privacyAfter": "and agree to the processing of my data as outlined.",
+    "privacyError": "Please accept the privacy policy.",
+    "send": "Send message :)",
+    "sending": "Sending…",
+    "success": "Thanks! Your message has been sent.",
+    "error": "Something went wrong. Please try again later."
+  },
+  "footer": {
+    "legalNotice": "Legal Notice",
+    "logoAlt": "Alica Haunstetter – back to top"
+  },
+  "legal": {
+    "title": "Legal Notice"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "germanOnlyNote": "Only the German version of this privacy policy is legally binding. The following English translation is provided for transparency and convenience only."
+  }
+}

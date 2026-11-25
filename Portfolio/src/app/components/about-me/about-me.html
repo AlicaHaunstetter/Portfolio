@@ -1,14 +1,9 @@
 <section class="about-me" id="about-me">
   <div class="about-me__inner content-wrapper">
     <div class="about-me__text">
-      <h1>About me</h1>
+      <h1>{{ 'about.title' | translate }}</h1>
 
-      <p class="about-me__intro">
-        I’m a career-changing Frontend Web Developer focused on web development and design. I love
-        bringing creative ideas to life through clean code—and seeing my creativity grow with every
-        new possibility I discover. Right now, I’m soaking up as much knowledge as possible and
-        building projects to launch my career as a Junior Developer.
-      </p>
+      <p class="about-me__intro">{{ 'about.intro' | translate }}</p>
 
       <ul class="about-me__list">
         <li>
@@ -28,10 +23,7 @@
               fill="#70E61C"
             />
           </svg>
-          <p>
-            I’m based in Meitingen (near Augsburg, Bavaria) and am open to remote opportunities and
-            flexible, modern ways of working.
-          </p>
+          <p>{{ 'about.location' | translate }}</p>
         </li>
 
         <li>
@@ -54,10 +46,7 @@
               mask="url(#stroke0_213217_703)"
             />
           </svg>
-          <p>
-            Open-mindedly exploring new tech keeps my skills sharp—especially interactive UI/UX,
-            motion design, and scroll-driven animations to bring web experiences to life.
-          </p>
+          <p>{{ 'about.curiosity' | translate }}</p>
         </li>
 
         <li>
@@ -73,11 +62,7 @@
               fill="#70E61C"
             />
           </svg>
-          <p>
-            With tricky bugs, I understand the root cause first, then aim for a clean,
-            minimal-invasive solution and bounce ideas off the team—combining creativity,
-            self-reliance, and collaboration in every challenge.
-          </p>
+          <p>{{ 'about.problemSolving' | translate }}</p>
         </li>
       </ul>
     </div>
@@ -86,7 +71,7 @@
       <img src="/img/Purple shadow Foto.png" alt="" class="about-me__glow" />
 
       <div class="about-me__circle">
-        <img src="/img/Alica Haunstetter.jpg" alt="Portrait Alica" />
+        <img src="/img/Alica Haunstetter.jpg" [alt]="'about.portraitAlt' | translate" />
       </div>
 
       <span class="about-me__line"></span>

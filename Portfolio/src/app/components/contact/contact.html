@@ -2,19 +2,16 @@
   <div class="contact__inner content-wrapper">
     <div class="contact__heading">
       <span class="contact__line"></span>
-      <h1>Contact</h1>
+      <h1>{{ 'contact.title' | translate }}</h1>
     </div>
 
     <div class="contact__body">
       <div class="contact__text">
-        <h2>Got a problem to solve?</h2>
+        <h2>{{ 'contact.subtitle' | translate }}</h2>
+        <p>{{ 'contact.text' | translate }}</p>
         <p>
-          Looking for a Frontend Developer who cares about both clean code and intuitive design? I’m
-          open to new roles and exciting projects where I can help turn complex ideas into seamless
-          user experiences. Feel free to reach out—I’d love to chat about how I can add value to
-          your team.
+          {{ 'contact.needDev' | translate }} <strong>{{ 'contact.contactMe' | translate }}</strong>
         </p>
-        <p>Need a Frontend developer? <strong>Contact me!</strong></p>
       </div>
 
       <form class="contact__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
@@ -22,11 +19,11 @@
           <input
             type="text"
             formControlName="name"
-            placeholder="Your name"
-            aria-label="Your name"
+            [placeholder]="'contact.namePlaceholder' | translate"
+            [attr.aria-label]="'contact.namePlaceholder' | translate"
           />
           @if (isInvalid('name')) {
-            <span class="contact__error">Please enter your name.</span>
+            <span class="contact__error">{{ 'contact.nameError' | translate }}</span>
           }
         </div>
 
@@ -34,35 +31,36 @@
           <input
             type="email"
             formControlName="email"
-            placeholder="Your email"
-            aria-label="Your email"
+            [placeholder]="'contact.emailPlaceholder' | translate"
+            [attr.aria-label]="'contact.emailPlaceholder' | translate"
           />
           @if (isInvalid('email')) {
-            <span class="contact__error">Please enter a valid email address.</span>
+            <span class="contact__error">{{ 'contact.emailError' | translate }}</span>
           }
         </div>
 
         <div class="contact__field">
           <textarea
             formControlName="message"
-            placeholder="Your message"
-            aria-label="Your message"
+            [placeholder]="'contact.messagePlaceholder' | translate"
+            [attr.aria-label]="'contact.messagePlaceholder' | translate"
             rows="6"
           ></textarea>
           @if (isInvalid('message')) {
-            <span class="contact__error">Please enter at least 10 characters.</span>
+            <span class="contact__error">{{ 'contact.messageError' | translate }}</span>
           }
         </div>
 
         <label class="contact__privacy">
           <input type="checkbox" formControlName="privacy" />
           <span>
-            I've read the <a routerLink="/privacy-policy">privacy policy</a>
-            and agree to the processing of my data as outlined.
+            {{ 'contact.privacyBefore' | translate }}
+            <a routerLink="/privacy-policy">{{ 'contact.privacyLink' | translate }}</a>
+            {{ 'contact.privacyAfter' | translate }}
           </span>
         </label>
         @if (isInvalid('privacy')) {
-          <span class="contact__error">Please accept the privacy policy.</span>
+          <span class="contact__error">{{ 'contact.privacyError' | translate }}</span>
         }
 
         <button
@@ -70,17 +68,17 @@
           class="contact__submit"
           [disabled]="form.invalid || status() === 'sending'"
         >
-          {{ status() === 'sending' ? 'Sending…' : 'Send message :)' }}
+          {{ (status() === 'sending' ? 'contact.sending' : 'contact.send') | translate }}
         </button>
 
         @if (status() === 'success') {
           <p class="contact__feedback contact__feedback--success">
-            Thanks! Your message has been sent.
+            {{ 'contact.success' | translate }}
           </p>
         }
         @if (status() === 'error') {
           <p class="contact__feedback contact__feedback--error">
-            Something went wrong. Please try again later.
+            {{ 'contact.error' | translate }}
           </p>
         }
       </form>

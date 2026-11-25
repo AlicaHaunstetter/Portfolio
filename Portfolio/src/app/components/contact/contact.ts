@@ -2,11 +2,12 @@ import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { TranslatePipe } from '@ngx-translate/core';
 
 type SendStatus = 'idle' | 'sending' | 'success' | 'error';
 
 @Component({
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule, RouterLink, TranslatePipe],
   selector: 'app-contact',
   styleUrl: './contact.scss',
   templateUrl: './contact.html',

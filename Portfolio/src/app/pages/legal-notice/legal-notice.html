@@ -1,46 +1,44 @@
 <section class="legal content-wrapper">
   <div class="legal__heading">
     <span class="legal__line legal__line--left"></span>
-    <h1>Legal Notice</h1>
+    <h1>{{ 'legal.title' | translate }}</h1>
     <span class="legal__line legal__line--right"></span>
   </div>
 
-  <div class="legal__content">
-    <h2>Impressum</h2>
-
-    <p>
-      Alica Haunstetter<br />
-      Werner-von-Siemens-Straße 7A<br />
-      86405 Meitingen<br />
-      <br />
-      Telefon: +49 (0) 1712709705<br />
-      E-Mail: info@alica-haunstetter.de<br />
-      <br />
-      Verbraucherstreitbeilegung/Universalschlichtungsstelle<br />
-      Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-      Verbraucherschlichtungsstelle teilzunehmen.<br />
-      <br />
-      Quelle: https://www.e-recht24.de
-    </p>
-  </div>
-
-  <div class="legal__content">
-    <h2>Legal Notice</h2>
-
-    <p>
-      Alica Haunstetter<br />
-      Werner-von-Siemens-Straße 7A<br />
-      86405 Meitingen<br />
-      Germany<br />
-      <br />
-      Phone: +49 (0) 1712709705<br />
-      Email: info@alica-haunstetter.de<br />
-      <br />
-      Consumer dispute resolution / universal arbitration board<br />
-      We are neither willing nor obliged to participate in dispute resolution proceedings before a
-      consumer arbitration board.<br />
-      <br />
-      Source: https://www.e-recht24.de
-    </p>
-  </div>
+  @if (lang() === 'de') {
+    <div class="legal__content">
+      <p>
+        Alica Haunstetter<br />
+        Werner-von-Siemens-Straße 7A<br />
+        86405 Meitingen<br />
+        <br />
+        Telefon: +49 (0) 1712709705<br />
+        E-Mail: info@alica-haunstetter.de<br />
+        <br />
+        Verbraucherstreitbeilegung/Universalschlichtungsstelle<br />
+        Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+        Verbraucherschlichtungsstelle teilzunehmen.<br />
+        <br />
+        Quelle: https://www.e-recht24.de
+      </p>
+    </div>
+  } @else {
+    <div class="legal__content">
+      <p>
+        Alica Haunstetter<br />
+        Werner-von-Siemens-Straße 7A<br />
+        86405 Meitingen<br />
+        Germany<br />
+        <br />
+        Phone: +49 (0) 1712709705<br />
+        Email: info@alica-haunstetter.de<br />
+        <br />
+        Consumer dispute resolution / universal arbitration board<br />
+        We are neither willing nor obliged to participate in dispute resolution proceedings before a
+        consumer arbitration board.<br />
+        <br />
+        Source: https://www.e-recht24.de
+      </p>
+    </div>
+  }
 </section>

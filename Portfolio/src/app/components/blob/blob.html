@@ -1,0 +1,24 @@
+<svg viewBox="0 0 600 600" aria-hidden="true">
+  <filter [attr.id]="filterId" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur [attr.stdDeviation]="shape().blur" />
+  </filter>
+
+  <path
+    [style.fill]="fill()"
+    fill-rule="evenodd"
+    [attr.filter]="'url(#' + filterId + ')'"
+    [attr.d]="paths()[0]"
+  >
+    @if (!reducedMotion) {
+      <animate
+        attributeName="d"
+        repeatCount="indefinite"
+        calcMode="spline"
+        keyTimes="0;0.33;0.66;1"
+        keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"
+        [attr.dur]="duration() + 's'"
+        [attr.values]="animationValues()"
+      />
+    }
+  </path>
+</svg>

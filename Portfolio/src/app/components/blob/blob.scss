@@ -1,0 +1,12 @@
+:host {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  pointer-events: none;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}

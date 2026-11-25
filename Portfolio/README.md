@@ -1,59 +1,64 @@
-# Portfolio
+# Portfolio – Alica Haunstetter
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.6.
+Personal portfolio website built with Angular. It presents my skills, selected projects and testimonials, and offers a contact form to get in touch.
 
-## Development server
+**Live:** [alica-haunstetter.de](https://alica-haunstetter.de)
 
-To start a local development server, run:
+## Features
 
-```bash
-ng serve
-```
+- **Responsive, mobile-first layout** – works from 320px screen width up to large desktops, using fluid sizes (`clamp()`, `min()`) and only a few `min-width` breakpoints
+- **Bilingual (DE / EN)** – language switch at runtime with ngx-translate; the `lang` attribute of the page is updated automatically
+- **Animated background blobs** – reusable Angular component that generates organic SVG shapes and morphs between them; respects `prefers-reduced-motion`
+- **Contact form** – reactive form with validation and privacy-policy consent, sent via a PHP mail script
+- **Testimonial slider** – navigation via arrows and dots
+- **Legal pages** – legal notice and privacy policy as separate routes
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tech Stack
 
-## Code scaffolding
+- [Angular 22](https://angular.dev) (standalone components, signals, new control flow)
+- TypeScript
+- SCSS (BEM naming)
+- [ngx-translate](https://github.com/ngx-translate/core)
+- PHP (mail delivery)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Getting Started
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+**Requirements:** Node.js and npm
 
 ```bash
-ng build
+# install dependencies
+npm install
+
+# start the dev server and open the browser
+npm start
+
+# production build (output in dist/)
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Project Structure
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
+```
+src/
+├── app/
+│   ├── components/   # sections of the start page (hero, about-me, skills, portfolio, …) and shared components (navbar, footer, blob)
+│   ├── pages/        # routed pages (home, legal-notice, privacy-policy)
+│   └── services/     # language service
+├── styles.scss       # global styles, CSS variables, base typography
+└── index.html
+public/
+├── i18n/             # translation files (de.json, en.json)
+├── img/              # images and project screenshots
+├── icons/            # logos and icons
+├── fonts/            # Poppins
+├── sendMail.php      # mail script for the contact form
+└── .htaccess         # HTTPS redirect and Angular routing on Apache
 ```
 
-## Running end-to-end tests
+## Deployment
 
-For end-to-end (e2e) testing, run:
+The site runs on an Apache web server. The `.htaccess` file forces HTTPS and redirects all routes to `index.html`, so Angular routes like `/legal-notice` also work on reload. `sendMail.php` must be deployed together with the build output.
 
-```bash
-ng e2e
-```
+## Contact
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Alica Haunstetter – [info@alica-haunstetter.de](mailto:info@alica-haunstetter.de) · [LinkedIn](https://www.linkedin.com/in/alica-haunstetter/) · [GitHub](https://github.com/AlicaHaunstetter)

@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './components/navbar/navbar';
 import { Footer } from './components/footer/footer';
@@ -11,8 +11,6 @@ import { LanguageService } from './services/language';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('Portfolio');
-
   /** Initializes the display language on app start. */
   constructor() {
     inject(LanguageService).init();

@@ -1,95 +1,41 @@
-.privacy {
-  padding-block: 2rem 4rem;
-  color: #fff;
+.legal-page__content {
+  h2 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.25rem, 1rem + 1.5vw, 1.75rem);
+    color: var(--color-primary-2);
+  }
 
-  // ---------- Überschrift mit Linien ----------
-  &__heading {
-    display: flex;
-    align-items: center;
-    padding-left: 0;
-    gap: 1.5rem;
-    margin-bottom: clamp(2rem, 4vw, 3rem);
+  p {
+    margin: 0 0 2.5rem;
+  }
 
-    h1 {
-      margin: 0;
-      color: var(--color-primary-1);
-      hyphens: auto;
+  h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.25rem;
+    color: var(--color-primary-1);
+  }
+
+  h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  ul {
+    margin: 0 0 2.5rem;
+    padding-left: 1.25rem;
+
+    li {
+      margin-bottom: 0.5rem;
     }
   }
 
-  &__line {
-    height: 2px;
-    background-color: var(--color-primary-2);
+  a {
+    color: var(--color-primary-2);
+    word-break: break-all;
 
-    &--left {
-      width: 2rem;
-      flex-shrink: 0;
+    &:hover {
+      text-decoration: none;
     }
-
-    &--right {
-      flex: 1;
-    }
-  }
-
-  // ---------- Text ----------
-  &__content {
-    max-width: 760px;
-    margin: 0;
-    font-size: 0.875rem;
-    line-height: 1.3;
-
-    h2 {
-      margin: 0 0 1rem;
-      font-size: clamp(1.25rem, 1rem + 1.5vw, 1.75rem);
-      color: var(--color-primary-2);
-    }
-
-    p {
-      margin: 0 0 2.5rem;
-    }
-
-    h3 {
-      margin: 0 0 0.75rem;
-      font-size: 1.25rem;
-      color: var(--color-primary-1);
-    }
-
-    h4 {
-      margin: 0 0 0.5rem;
-      font-size: 1rem;
-      font-weight: 700;
-    }
-
-    ul {
-      margin: 0 0 2.5rem;
-      padding-left: 1.25rem;
-
-      li {
-        margin-bottom: 0.5rem;
-      }
-    }
-
-    a {
-      color: var(--color-primary-2);
-      word-break: break-all;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-}
-
-@media (min-width: 1024px) {
-  .privacy__heading {
-    padding-left: 20%;
-  }
-
-  .privacy__heading h1 {
-    white-space: nowrap;
-  }
-
-  .privacy__line--left {
-    width: 100px;
   }
 }

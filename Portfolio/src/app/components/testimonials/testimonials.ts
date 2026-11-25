@@ -1,6 +1,6 @@
 import { Component, computed, signal } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import { Blob } from '../blob/blob';
+import { BackgroundBlob } from '../blob/blob';
 
 interface Testimonial {
   text: string;
@@ -10,7 +10,7 @@ interface Testimonial {
 }
 
 @Component({
-  imports: [Blob, TranslatePipe],
+  imports: [BackgroundBlob, TranslatePipe],
   selector: 'app-testimonials',
   styleUrl: './testimonials.scss',
   templateUrl: './testimonials.html',

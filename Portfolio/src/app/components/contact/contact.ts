@@ -3,12 +3,12 @@ import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { TranslatePipe } from '@ngx-translate/core';
-import { Blob } from '../blob/blob';
+import { BackgroundBlob } from '../blob/blob';
 
 type SendStatus = 'idle' | 'sending' | 'success' | 'error';
 
 @Component({
-  imports: [Blob, ReactiveFormsModule, RouterLink, TranslatePipe],
+  imports: [BackgroundBlob, ReactiveFormsModule, RouterLink, TranslatePipe],
   selector: 'app-contact',
   styleUrl: './contact.scss',
   templateUrl: './contact.html',

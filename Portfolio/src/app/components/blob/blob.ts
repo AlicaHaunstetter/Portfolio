@@ -70,7 +70,7 @@ function toSmoothPath(points: [number, number][]): string {
   templateUrl: './blob.html',
   styleUrl: './blob.scss',
 })
-export class Blob {
+export class BackgroundBlob {
   color = input<'green' | 'purple'>('purple');
   variant = input<BlobVariant>('loop');
   seed = input(1);

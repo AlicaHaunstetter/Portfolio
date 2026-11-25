@@ -13,7 +13,6 @@
     padding-block: clamp(2.5rem, 2rem + 3vw, 5rem);
   }
 
-  // ---------- Links: Logo + Legal Notice ----------
   &__brand {
     display: contents;
     flex-direction: column;
@@ -53,13 +52,11 @@
     }
   }
 
-  // ---------- Mitte: Copyright ----------
   &__copyright {
     margin: 0;
     font-size: 1.1rem;
   }
 
-  // ---------- Rechts: Socials ----------
   &__socials {
     justify-self: center;
     display: flex;

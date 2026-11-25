@@ -20,7 +20,6 @@
     gap: 2.5rem;
   }
 
-  // Zwei schräge lila Balken als Anführungszeichen
   &__quote {
     position: absolute;
     top: -2rem;
@@ -102,7 +101,6 @@
       object-fit: cover;
     }
 
-    // Lila Linie rechts am Foto
     &::after {
       content: '';
       position: absolute;

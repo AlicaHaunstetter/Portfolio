@@ -38,14 +38,20 @@ export class Testimonials {
   currentIndex = signal(0);
   current = computed(() => this.testimonials[this.currentIndex()]);
 
+  /** Shows the next testimonial, wrapping around to the first. */
   next(): void {
     this.currentIndex.update((i) => (i + 1) % this.testimonials.length);
   }
 
+  /** Shows the previous testimonial, wrapping around to the last. */
   prev(): void {
     this.currentIndex.update((i) => (i - 1 + this.testimonials.length) % this.testimonials.length);
   }
 
+  /**
+   * Shows the testimonial at the given position.
+   * @param index - Zero-based index of the testimonial.
+   */
   goTo(index: number): void {
     this.currentIndex.set(index);
   }

@@ -26,11 +26,20 @@ export class Contact {
     privacy: [false, Validators.requiredTrue],
   });
 
+  /**
+   * Checks whether a form control should display a validation error.
+   * @param controlName - Name of the form control to check.
+   * @returns True if the control is invalid and has been touched.
+   */
   isInvalid(controlName: keyof typeof this.form.controls): boolean {
     const control = this.form.controls[controlName];
     return control.invalid && control.touched;
   }
 
+  /**
+   * Validates the form and sends the contact message to the mail endpoint.
+   * Updates the send status and resets the form on success.
+   */
   submit(): void {
     this.form.markAllAsTouched();
     if (this.form.invalid || this.status() === 'sending') return;

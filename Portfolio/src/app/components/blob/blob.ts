@@ -3,11 +3,11 @@ import { Component, computed, input } from '@angular/core';
 type BlobVariant = 'loop' | 'wild';
 
 interface BlobShape {
-  points: number; // number of anchor points
-  jitter: number; // how far points may break out of their order → creates loops
-  minRadius: number; // smallest distance to the center (fraction of RADIUS)
-  radiusRange: number; // random extra distance
-  blur: number; // blur strength
+  points: number;
+  jitter: number;
+  minRadius: number;
+  radiusRange: number;
+  blur: number;
 }
 
 const SHAPES: Record<BlobVariant, BlobShape> = {
@@ -15,17 +15,26 @@ const SHAPES: Record<BlobVariant, BlobShape> = {
   wild: { points: 18, jitter: 2.2, minRadius: 0.3, radiusRange: 0.85, blur: 25 },
 };
 
-const CENTER = 300; // center of the 600×600 canvas
+const CENTER = 300;
 const RADIUS = 200;
 let nextId = 0;
 
-/** Seeded random generator: same seed = same shape on every page load */
+/**
+ * Creates a seeded random generator: the same seed always produces the same sequence.
+ * @param seed - Start value (> 0).
+ * @returns Function that returns a pseudo-random number between 0 and 1.
+ */
 function createRandom(seed: number) {
   let state = seed;
   return () => (state = (state * 16807) % 2147483647) / 2147483647;
 }
 
-/** Distributes points around the center with random angle and distance */
+/**
+ * Distributes points around the center with random angle and distance.
+ * @param shape - Shape settings of the blob variant.
+ * @param random - Seeded random generator.
+ * @returns List of [x, y] coordinates.
+ */
 function createPoints(shape: BlobShape, random: () => number): [number, number][] {
   const step = (2 * Math.PI) / shape.points;
   return Array.from({ length: shape.points }, (_, i) => {
@@ -35,7 +44,11 @@ function createPoints(shape: BlobShape, random: () => number): [number, number][
   });
 }
 
-/** Connects the points into a smooth closed curve */
+/**
+ * Connects the points into a smooth closed curve.
+ * @param points - Anchor points of the blob.
+ * @returns SVG path data.
+ */
 function toSmoothPath(points: [number, number][]): string {
   const n = points.length;
   const f = (v: number) => v.toFixed(1);
@@ -60,21 +73,19 @@ function toSmoothPath(points: [number, number][]): string {
 export class Blob {
   color = input<'green' | 'purple'>('purple');
   variant = input<BlobVariant>('loop');
-  seed = input(1); // different number (> 0) = different shape
-  duration = input(16); // seconds per cycle
+  seed = input(1);
+  duration = input(16);
 
-  readonly filterId = `blob-blur-${nextId++}`; // must be unique per blob
+  readonly filterId = `blob-blur-${nextId++}`;
   readonly reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   shape = computed(() => SHAPES[this.variant()]);
 
-  /** 3 shape variants with the same point count → the browser can morph between them */
   paths = computed(() => {
     const random = createRandom(this.seed());
     return [0, 1, 2].map(() => toSmoothPath(createPoints(this.shape(), random)));
   });
 
-  /** Sequence: shape 1 → 2 → 3 → back to 1 */
   animationValues = computed(() => [...this.paths(), this.paths()[0]].join(';'));
 
   fill = computed(() =>

@@ -13,6 +13,7 @@ import { LanguageService } from './services/language';
 export class App {
   protected readonly title = signal('Portfolio');
 
+  /** Initializes the display language on app start. */
   constructor() {
     inject(LanguageService).init();
   }

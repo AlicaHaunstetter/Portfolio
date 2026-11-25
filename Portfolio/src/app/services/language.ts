@@ -11,7 +11,6 @@ export class LanguageService {
   private translate = inject(TranslateService);
   private document = inject(DOCUMENT);
 
-  /** Currently active language (reactive signal). */
   readonly current = this.translate.currentLang;
 
   /**

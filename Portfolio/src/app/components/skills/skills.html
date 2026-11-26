@@ -4,7 +4,7 @@
     <ul class="skills__grid">
       @for (skill of skills; track skill.name) {
         <li class="skills__item" [class.skills__item--highlight]="$last">
-          <img [src]="'/icons/Logos/' + skill.icon" [alt]="skill.name" />
+          <img [src]="'/myicons/Logos/' + skill.icon" [alt]="skill.name" />
           <span>{{ skill.name | translate }}</span>
         </li>
       }

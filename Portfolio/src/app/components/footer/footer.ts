@@ -21,13 +21,13 @@ export class Footer {
     {
       name: 'GitHub',
       url: 'https://github.com/AlicaHaunstetter',
-      icon: '/icons/social/github.svg',
+      icon: '/myicons/social/github.svg',
     },
-    { name: 'Email', url: 'mailto:info@alica-haunstetter.de', icon: '/icons/social/mail.svg' },
+    { name: 'Email', url: 'mailto:info@alica-haunstetter.de', icon: '/myicons/social/mail.svg' },
     {
       name: 'LinkedIn',
       url: 'https://www.linkedin.com/in/alica-haunstetter/',
-      icon: '/icons/social/linkedin.svg',
+      icon: '/myicons/social/linkedin.svg',
     },
   ];
 }

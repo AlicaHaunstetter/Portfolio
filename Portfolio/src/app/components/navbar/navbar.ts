@@ -1,9 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Lang, LanguageService } from '../../services/language';
 
 @Component({
-  imports: [TranslatePipe],
+  imports: [RouterLink, TranslatePipe],
   selector: 'app-navbar',
   styleUrl: './navbar.scss',
   templateUrl: './navbar.html',

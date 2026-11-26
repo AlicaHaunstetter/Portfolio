@@ -1,14 +1,14 @@
 <header class="navbar">
   <div class="navbar__inner content-wrapper">
-    <a href="#top" class="navbar__logo">
+    <a routerLink="/" fragment="top" class="navbar__logo">
       <img src="/icons/Alica-Logo.png" [alt]="'nav.logoAlt' | translate" class="navbar__logo-img" />
     </a>
 
     <nav class="navbar__links">
-      <a href="#about-me">{{ 'nav.aboutMe' | translate }}</a>
-      <a href="#skills">{{ 'nav.skills' | translate }}</a>
-      <a href="#portfolio">{{ 'nav.portfolio' | translate }}</a>
-      <a href="#contact">{{ 'nav.contact' | translate }}</a>
+      <a routerLink="/" fragment="about-me">{{ 'nav.aboutMe' | translate }}</a>
+      <a routerLink="/" fragment="skills">{{ 'nav.skills' | translate }}</a>
+      <a routerLink="/" fragment="portfolio">{{ 'nav.portfolio' | translate }}</a>
+      <a routerLink="/" fragment="contact">{{ 'nav.contact' | translate }}</a>
     </nav>
 
     <div class="navbar__lang">
@@ -47,10 +47,10 @@
 @if (isMenuOpen()) {
   <div class="navbar__overlay">
     <nav class="navbar__overlay-links">
-      <a href="#about-me" (click)="closeMenu()">{{ 'nav.aboutMe' | translate }}</a>
-      <a href="#skills" (click)="closeMenu()">{{ 'nav.mySkills' | translate }}</a>
-      <a href="#portfolio" (click)="closeMenu()">{{ 'nav.portfolio' | translate }}</a>
-      <a href="#contact" (click)="closeMenu()">{{ 'nav.contact' | translate }}</a>
+      <a routerLink="/" fragment="about-me" (click)="closeMenu()">{{ 'nav.aboutMe' | translate }}</a>
+      <a routerLink="/" fragment="skills" (click)="closeMenu()">{{ 'nav.mySkills' | translate }}</a>
+      <a routerLink="/" fragment="portfolio" (click)="closeMenu()">{{ 'nav.portfolio' | translate }}</a>
+      <a routerLink="/" fragment="contact" (click)="closeMenu()">{{ 'nav.contact' | translate }}</a>
     </nav>
 
     <div class="navbar__overlay-lang">

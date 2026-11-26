@@ -50,7 +50,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $safeMessage = nl2br(htmlspecialchars($userMessage, ENT_QUOTES, 'UTF-8'));
 
         // Empfängeradresse (nutzt die oben definierte Mail)
-        $recipient = $siteEmail; 
+        $recipient = "haunstetter.alica@gmail.com";
         $subject = 'Website Contact Form';
 
         $mailBody = "
@@ -74,7 +74,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $subject,
             $mailBody,
             implode("\r\n", $headers),
-            '-f ' . $siteEmail 
+            '-f'.$siteEmail  
         );
 
         if ($success) {

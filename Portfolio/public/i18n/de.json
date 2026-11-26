@@ -5,41 +5,41 @@
     "mySkills": "Meine Skills",
     "portfolio": "Portfolio",
     "contact": "Kontakt",
-    "logoAlt": "Logo",
+    "logoAlt": "Alica Haunstetter – Frontend-Entwicklerin",
     "openMenu": "Menü öffnen"
   },
   "hero": {
     "iAm": "Ich bin",
     "cta": "Lass uns sprechen",
     "scrollDown": "Nach unten scrollen",
-    "portraitAlt": "Porträt von Alica"
+    "portraitAlt": "Alica Haunstetter, Junior Frontend-Entwicklerin aus Augsburg"
   },
   "about": {
     "title": "Über mich",
-    "intro": "Ich bin Frontend Developer im Quereinstieg mit Fokus auf Webentwicklung und Design. Ich liebe es, kreative Ideen mit sauberem Code zum Leben zu erwecken – und zu sehen, wie meine Kreativität mit jeder neuen Möglichkeit wächst. Gerade sauge ich so viel Wissen wie möglich auf und baue Projekte, um als Junior Developer durchzustarten.",
+    "intro": "Ich bin Junior Frontend-Entwicklerin und Quereinsteigerin mit Fokus auf Angular, TypeScript und UI/UX-Design. Mein Ding: kreative Ideen mit sauberem Code umsetzen und mit jedem Projekt dazulernen. Durch die Developer Akademie und eigene Webprojekte habe ich das Fundament gelegt, um als Junior Developerin durchzustarten.",
     "location": "Ich wohne in Meitingen (bei Augsburg, Bayern) und bin offen für Remote-Stellen sowie flexible, moderne Arbeitsmodelle.",
-    "curiosity": "Neue Technologien offen zu erkunden, hält meine Skills scharf – besonders interaktive UI/UX, Motion Design und scrollbasierte Animationen, die Weberlebnisse lebendig machen.",
+    "curiosity": "Ich erkunde gern neue Technologien, am liebsten interaktive UI/UX, responsives Webdesign, Motion Design und Scroll-Animationen.",
     "problemSolving": "Bei kniffligen Bugs verstehe ich zuerst die Ursache, suche dann eine saubere, minimalinvasive Lösung und tausche mich mit dem Team aus – so verbinde ich Kreativität, Eigenständigkeit und Teamarbeit bei jeder Herausforderung.",
-    "portraitAlt": "Porträt von Alica"
+    "portraitAlt": "Alica Haunstetter – Frontend-Entwicklerin mit Fokus auf Angular und UI/UX"
   },
   "skills": {
     "title": "Meine Skills",
-    "intro": "Von sauberem UI-Code und Angular bis zu REST-APIs und Scrum – das ist mein Werkzeugkasten.",
+    "intro": "Von HTML, CSS/SCSS und JavaScript über TypeScript und Angular bis zu REST-APIs, Firebase und Scrum – das ist mein Werkzeugkasten für moderne Webanwendungen.",
     "headlineBefore": "Du suchst",
     "headlineAccent": "einen anderen Skill",
     "headlineAfter": "?",
-    "outro": "Ich lerne immer gern neue Tools dazu – besonders rund um interaktive UIs, Motion und alles, was das Projekt gerade braucht.",
+    "outro": "Sag einfach Bescheid! Wenn euer Team mit anderen Technologien arbeitet, arbeite ich mich schnell ein und bleibe flexibel.",
     "cta": "Kontakt aufnehmen",
     "learning": "Stets lernbereit"
   },
   "portfolio": {
-    "intro": "Hier sind einige meiner Lieblingsprojekte – klick dich durch und sieh selbst, was ich kann.",
+    "intro": "Ausgewählte Webprojekte mit Angular, TypeScript und JavaScript. Klick dich gern durch und lern meine Arbeit kennen.",
     "liveTest": "Live-Test",
-    "github": "Github",
+    "github": "GitHub",
     "projects": {
-      "join": "Task Manager nach dem Vorbild des Kanban-Systems. Aufgaben per Drag & Drop erstellen und organisieren, Nutzer und Kategorien zuweisen.",
-      "wickedWoods": "Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf der kleinen Hexe, im unheimlichen Wald zu überleben, indem du Tränke sammelst und dunkle Kreaturen abwehrst.",
-      "daBubble": "Ein Slack-Klon, der die Kommunikation und Zusammenarbeit im Team revolutioniert – mit intuitiver Oberfläche, Echtzeit-Nachrichten und durchdachter Channel-Organisation."
+      "join": "Kanban-Task-Manager mit Angular und Firebase: Aufgaben per Drag & Drop erstellen und organisieren, Nutzer und Kategorien zuweisen.",
+      "wickedWoods": "Browser-Jump-and-Run in JavaScript mit objektorientiertem Aufbau. Hilf der kleinen Hexe, im unheimlichen Wald zu überleben, indem du Tränke sammelst und dunkle Kreaturen abwehrst.",
+      "daBubble": "Echtzeit-Chat-App im Stil von Slack, gebaut mit Angular und Firebase – mit Channels, Direktnachrichten und intuitiver Oberfläche."
     }
   },
   "testimonials": {
@@ -63,8 +63,8 @@
   "contact": {
     "title": "Kontakt",
     "subtitle": "Du hast ein Problem zu lösen?",
-    "text": "Du suchst einen Frontend Developer, dem sauberer Code und intuitives Design gleichermaßen wichtig sind? Ich bin offen für neue Stellen und spannende Projekte, bei denen ich komplexe Ideen in nahtlose Nutzererlebnisse verwandeln kann. Melde dich gern – ich freue mich darauf, mit dir darüber zu sprechen, wie ich dein Team bereichern kann.",
-    "needDev": "Auf der Suche nach Frontend-Verstärkung?",
+    "text": "Du suchst Verstärkung fürs Frontend – jemanden, dem sauberer Code genauso wichtig ist wie intuitives Design? Ich bin offen für Neues und spannende Projekte, in denen ich Ideen in durchdachte Nutzererlebnisse verwandeln kann. Schreib mir gern – ich freue mich auf ein Gespräch darüber, wie ich dein Team unterstützen kann.",
+    "needDev": "",
     "contactMe": "Schreib mir!",
     "namePlaceholder": "Dein Name",
     "emailPlaceholder": "Deine E-Mail-Adresse",

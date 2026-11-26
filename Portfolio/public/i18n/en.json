@@ -5,41 +5,41 @@
     "mySkills": "My skills",
     "portfolio": "Portfolio",
     "contact": "Contact",
-    "logoAlt": "Logo",
+    "logoAlt": "Alica Haunstetter – Frontend Developer",
     "openMenu": "Open menu"
   },
   "hero": {
     "iAm": "I am",
     "cta": "Let's talk",
     "scrollDown": "Scroll down",
-    "portraitAlt": "Portrait of Alica"
+    "portraitAlt": "Alica Haunstetter, Junior Frontend Developer based in Bavaria Germany"
   },
   "about": {
     "title": "About me",
-    "intro": "I’m a career-changing Frontend Web Developer focused on web development and design. I love bringing creative ideas to life through clean code—and seeing my creativity grow with every new possibility I discover. Right now, I’m soaking up as much knowledge as possible and building projects to launch my career as a Junior Developer.",
+    "intro": "I'm a junior frontend developer and career changer focused on Angular, TypeScript and UI/UX design. My thing: bringing creative ideas to life with clean code and learning something new with every project. Through the Developer Akademie and my own web projects, I've built a solid foundation to start my career as a junior developer.",
     "location": "I’m based in Meitingen (near Augsburg, Bavaria) and am open to remote opportunities and flexible, modern ways of working.",
-    "curiosity": "Open-mindedly exploring new tech keeps my skills sharp—especially interactive UI/UX, motion design, and scroll-driven animations to bring web experiences to life.",
-    "problemSolving": "With tricky bugs, I understand the root cause first, then aim for a clean, minimal-invasive solution and bounce ideas off the team—combining creativity, self-reliance, and collaboration in every challenge.",
-    "portraitAlt": "Portrait of Alica"
+    "curiosity": "I love exploring new technologies, especially interactive UI/UX, responsive web design, motion design and scroll-based animations.",
+    "problemSolving": "With tricky bugs, I understand the root cause first, then aim for a clean, minimally invasive solution and bounce ideas off the team—combining creativity, self-reliance, and collaboration in every challenge.",
+    "portraitAlt": "Alica Haunstetter – frontend developer focused on Angular and UI/UX"
   },
   "skills": {
     "title": "My skills",
-    "intro": "From clean UI code and Angular to REST APIs and Scrum—here’s the toolkit I build with.",
+    "intro": "From HTML, CSS/SCSS and JavaScript to TypeScript, Angular, REST APIs, Firebase and Scrum – this is my toolkit for modern web applications.",
     "headlineBefore": "Looking for",
     "headlineAccent": "another skill",
     "headlineAfter": "?",
-    "outro": "Always excited to pick up new tools—especially interactive UI, motion, and whatever the project calls for.",
+    "outro": "Just let me know! If your team works with other technologies, I'll get up to speed quickly and stay flexible.",
     "cta": "Get in touch",
     "learning": "Continually learning"
   },
   "portfolio": {
-    "intro": "Check out some of my favorite builds—click around and see what I can do in action.",
+    "intro": "Selected web projects built with Angular, TypeScript and JavaScript. Click around and see my work in action.",
     "liveTest": "Live test",
-    "github": "Github",
+    "github": "GitHub",
     "projects": {
-      "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-      "wickedWoods": "A simple Jump-and-Run game based on an object-oriented approach. Help the little witch survive the wicked woods by collecting potions and fending off dark creatures.",
-      "daBubble": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+      "join": "Kanban task manager built with Angular and Firebase: create and organize tasks via drag and drop, assign users and categories.",
+      "wickedWoods": "Browser jump-and-run game built with object-oriented JavaScript. Help the little witch survive the wicked woods by collecting potions and fending off dark creatures.",
+      "daBubble": "Real-time chat app inspired by Slack, built with Angular and Firebase – featuring channels, direct messages and an intuitive interface."
     }
   },
   "testimonials": {
@@ -64,7 +64,7 @@
     "title": "Contact",
     "subtitle": "Got a problem to solve?",
     "text": "Looking for a Frontend Developer who cares about both clean code and intuitive design? I’m open to new roles and exciting projects where I can help turn complex ideas into seamless user experiences. Feel free to reach out—I’d love to chat about how I can add value to your team.",
-    "needDev": "Need a Frontend developer?",
+    "needDev": "",
     "contactMe": "Contact me!",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "Your email",
